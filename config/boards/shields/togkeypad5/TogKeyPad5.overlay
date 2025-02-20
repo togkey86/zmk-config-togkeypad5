@@ -7,6 +7,7 @@
         //zmk,matrix_transform = &default_transform;
 
     };
+
     default_kscan: kscan0 {
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
@@ -47,4 +48,13 @@
         kscan = <&default_kscan>; // Label of the kscan node, optional if all layouts use the same
         transform = <&default_transform>; // Label of the matrix transform for this layout
     };
+};
+
+&underlight {
+    compatible = "zmk,underlight";
+    label = "RGB Underglow";
+    chain-length = <5>;  // Change this based on your actual LED count
+    color-order = <RGB>;  // Options: RGB, GRB, BRG (depends on your LED)
+    gpio = <&pro_micro 9 GPIO_ACTIVE_HIGH>;  // Replace with your actual GPIO pin
+    features = <UNDERLIGHT_AMBIENT | UNDERLIGHT_BREATHING | UNDERLIGHT_REACTIVE>;
 };
