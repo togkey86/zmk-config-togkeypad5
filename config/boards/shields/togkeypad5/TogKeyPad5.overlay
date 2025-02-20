@@ -50,7 +50,7 @@
     };
 };
 
-&underlight {
+&led_strip {
     compatible = "zmk,underlight";
     label = "RGB Underglow";
     chain-length = <5>;  // Change this based on your actual LED count
