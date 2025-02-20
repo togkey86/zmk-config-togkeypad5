@@ -4,6 +4,7 @@
 
     chosen {
         zmk,kscan = &default_kscan;
+        zmk,underlight = &led_strip;
         //zmk,matrix_transform = &default_transform;
 
     };
