@@ -1,5 +1,31 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
 
+&spi1 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    mosi-pin = <11>;
+    sck-pin = <5>;     // unused, but required
+    miso-pin = <7>;    // unused, but required
+
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+        label = "WS2812";
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+
+        chain-length = <5>;
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+    };
+};
+
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+        zmk,underglow = &led_strip;
+    };
+};
+
 / {
 
     chosen {
@@ -49,29 +75,3 @@
         transform = <&default_transform>; // Label of the matrix transform for this layout
     };
 };
-
-&spi1 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    mosi-pin = <11>;
-    sck-pin = <5>;     // unused, but required
-    miso-pin = <7>;    // unused, but required
-
-    led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-        label = "WS2812";
-        reg = <0>;
-        spi-max-frequency = <4000000>;
-
-        chain-length = <5>;
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-    };
-};
-
-/ {
-    chosen {
-        zmk,kscan = &default_kscan;
-        zmk,underglow = &led_strip;
-    };
-}
