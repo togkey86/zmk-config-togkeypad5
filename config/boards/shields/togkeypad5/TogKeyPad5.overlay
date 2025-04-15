@@ -51,30 +51,38 @@
 };
 
 &spi1 {
-	compatible = "nordic,nrf-spim";
-	status = "okay";
-	mosi-pin = <11>;
-	// Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-	sck-pin = <5>;
-	miso-pin = <7>;
+    status = "okay";
+    cs-gpios = <>;
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
+    pinctrl-names = "default", "sleep";
 
-	led_strip: ws2812@0 {
-		compatible = "worldsemi,ws2812-spi";
-		label = "WS2812";
-
-		/* SPI */
-		reg = <0>; /* ignored, but necessary for SPI bindings */
-		spi-max-frequency = <4000000>;
-
-		/* WS2812 */
-		chain-length = <5>; /* arbitrary; change at will */
-		spi-one-frame = <0x70>;
-		spi-zero-frame = <0x40>;
-	};
+    led_strip: ws2812@0 {
+        compatible = "worldsemi,ws2812-spi";
+        label = "WS2812";
+        reg = <0>;
+        spi-max-frequency = <4000000>;
+        chain-length = <5>;
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+    };
 };
 
-/ {
-	chosen {
-		zmk,underglow = &led_strip;
-	};
+&pinctrl {
+    spi1_default: spi1_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 11)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 7)>;
+        };
+    };
+
+    spi1_sleep: spi1_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 0, 5)>,
+                    <NRF_PSEL(SPIM_MOSI, 0, 11)>,
+                    <NRF_PSEL(SPIM_MISO, 0, 7)>;
+            low-power-enable;
+        };
+    };
 };
