@@ -33,7 +33,7 @@
         compatible = "zmk,physical-layout";
         display-name = "TogKey Pad 2x3";
 
-        kscan = <&kscan0>;
+        kscan = <&kscan>;
         transform = <&transform>;
 
         keys  //                     w   h    x    y     rot    rx    ry
