@@ -29,10 +29,9 @@
 
     };
     
-    physical_layout0: physical_layout_0 {
+    layout: layout {
         compatible = "zmk,physical-layout";
         display-name = "TogKey Pad 2x3";
-
         kscan = <&kscan>;
         transform = <&transform>;
 
