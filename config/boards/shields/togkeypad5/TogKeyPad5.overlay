@@ -1,8 +1,8 @@
 #include "TogKeyPad5.dtsi"
 
-&transform {
-    col-offset = <3>;
-};
+//&transform {
+ //   col-offset = <3>;
+//};
 
 &kscan {
     col-gpios = <&pro_micro 2 GPIO_ACTIVE_HIGH>, 
