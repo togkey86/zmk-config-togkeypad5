@@ -25,7 +25,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&go_to_bluetooth_layer>;
+            bindings = <&go_to_bluetooth_layer>, <&kp>;
             display-name = "Bluetooth-Tap";
         };
 
@@ -35,7 +35,7 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp>, <&go_to_default_layer>;
+            bindings = <&go_to_default_layer>, <&studio_unlock>;
             display-name = "Default-Tap";
         };
     };
@@ -60,7 +60,7 @@
             //       |     Layer 0/ BT 0     |     BT 1     |
             // |     Studio     |     BT 2     |     BT CLR     |
             bindings = <
-                &my_mt1 0 studio_unlock  &bt BT_SEL 1
+                &my_mt1 0 0  &bt BT_SEL 1
                &bt BT_SEL 0    &bt BT_SEL 2    &bt BT_CLR
             >;
         };
