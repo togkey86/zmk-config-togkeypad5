@@ -17,27 +17,6 @@
         };
     };
 
-
-    behaviors {
-        mt: mt_switch_bluetooth_layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&go_to_bluetooth_layer>, <&kp C_VOLUME_DOWN>;
-            display-name = "BT_TAP";
-        };
-
-        mt: mt_switch_default_layer {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&go_to_bluetooth_layer>, <&bt BT_SEL 0>;
-            display-name = "DF_TAP";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -47,7 +26,7 @@
             //       |     Z     |     M     |
             // |     A     |     B     |     C     |
             bindings = <
-                &mt_switch_bluetooth_layer    &kp C_VOLUME_UP
+                &mt go_to_bluetooth_layer C_VOLUME_DOWN    &kp C_VOLUME_UP
                &kp C_PREVIOUS    &kp C_PLAY_PAUSE    &kp C_NEXT
             >;
         };
@@ -58,7 +37,7 @@
             //       |     Z     |     M     |
             // |     A     |     B     |     C     |
             bindings = <
-                &mt_switch_default_layer    &bt BT_SEL 1
+                &mt go_to_default_layer BT_SEL 0    &bt BT_SEL 1
                &studio_unlock    &bt BT_SEL 2    &bt BT_CLR
             >;
         };
