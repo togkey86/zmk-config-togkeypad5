@@ -34,7 +34,7 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&go_to_bluetooth_layer>, <&bt BT_SEL 0>;
-            display-name = "BT_TAP";
+            display-name = "DF_TAP";
         };
     };
 
