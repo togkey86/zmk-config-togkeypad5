@@ -49,7 +49,7 @@
             //       |     Vol -/Layer 1     |     Vol +     |
             // |     Prev     |     Play     |     Next     |
             bindings = <
-                &my_mt 0 C_VOLUME_DOWN    &kp C_VOLUME_UP
+                &my_mt 0 C_VOLUME_DOWN    &to 1
                &kp C_PREVIOUS    &kp C_PLAY_PAUSE    &kp C_NEXT
             >;
         };
