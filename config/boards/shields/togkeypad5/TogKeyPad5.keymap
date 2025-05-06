@@ -60,8 +60,8 @@
             //       |     Layer 0/ BT 0     |     BT 1     |
             // |     Studio     |     BT 2     |     BT CLR     |
             bindings = <
-                &bt BT_SEL 0   &bt BT_SEL 1
-               &studio_unlock    &bt BT_SEL 2    &bt BT_CLR
+                &my_mt1 0 studio_unlock  &bt BT_SEL 1
+               &bt BT_SEL 0    &bt BT_SEL 2    &bt BT_CLR
             >;
         };
     };
