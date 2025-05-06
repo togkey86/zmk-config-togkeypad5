@@ -3,10 +3,34 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
+    behaviors {
+        mt: switch_bluetooth_layer {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp C_VOLUME_DOWN>, <&rgb_ug RGB_COLOR_HSB(128,100,100)>;
+            display-name = "Mod-Tap";
+        };
+    };
+};
+
+/ {
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
+            // -------------------------------------
+            //       |     Z     |     M     |
+            // |     A     |     B     |     C     |
+            bindings = <
+                &switch_bluetooth_layer    &kp C_VOLUME_UP
+               &studio_unlock    &bt BT_SEL 0    &bt BT_CLR
+            >;
+        };
+
+        bluetooth_layer { // Layer 1
             // -------------------------------------
             //       |     Z     |     M     |
             // |     A     |     B     |     C     |
