@@ -3,7 +3,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-    behaviors {
+
+    keymap {
+        compatible = "zmk,keymap";
+
+        behaviors {
         mt: switch_bluetooth_layer {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -13,12 +17,6 @@
             display-name = "Mod-Tap";
         };
     };
-};
-
-/ {
-
-    keymap {
-        compatible = "zmk,keymap";
 
         default_layer { // Layer 0
             // -------------------------------------
