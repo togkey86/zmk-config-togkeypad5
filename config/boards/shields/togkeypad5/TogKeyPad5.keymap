@@ -24,7 +24,7 @@
             label = "BLUETOOTH_LAYER";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&go_to_bluetooth_layer>, <&kp>;
             display-name = "Hold-Tap-To-Bluetooth";
         };
@@ -34,7 +34,7 @@
             label = "DEFAULT_LAYER";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            tapping-term-ms = <300>;
             bindings = <&go_to_default_layer>, <&studio_unlock>;
             display-name = "Hold-Tap-To-Default-Studio-Unlock";
         };
