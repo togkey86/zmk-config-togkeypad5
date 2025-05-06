@@ -50,7 +50,7 @@
             // |     Prev     |     Play     |     Next     |
             bindings = <
                 &my_mt 0 C_VOLUME_DOWN
-                &studio_unlock
+                &kp C_VOLUME_UP
                 &kp C_PREVIOUS
                 &kp C_PLAY_PAUSE
                 &kp C_NEXT
