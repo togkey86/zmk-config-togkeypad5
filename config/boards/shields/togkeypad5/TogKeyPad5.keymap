@@ -8,13 +8,13 @@
         go_to_bluetooth_layer: go_to_bluetooth_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 1>, <&macro_press &rgb_ug RGB_COLOR_HSB(230,100,100)>; 
+            bindings = <&macro_press &to 1>, <&macro_press &rgb_ug RGB_COLOR_HSB(230,0,70)>; 
         };
 
         go_to_default_layer: go_to_default_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &to 0>, <&macro_press &rgb_ug RGB_COLOR_HSB(300,100,100)>; 
+            bindings = <&macro_press &to 0>, <&macro_press &rgb_ug RGB_COLOR_HSB(300,100,70)>; 
         };
     };
 
