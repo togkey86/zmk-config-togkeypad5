@@ -112,7 +112,7 @@
     };
 
     behaviors {
-        my_mt: bluetooth_layer {
+        my_mt: to_bluetooth_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "BLUETOOTH_LAYER";
             #binding-cells = <2>;
@@ -122,7 +122,7 @@
             display-name = "Hold-Tap Access Bluetooth Settings";
         };
 
-        my_mt1: default_layer {
+        my_mt1: to_default_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "DEFAULT_LAYER";
             #binding-cells = <2>;
