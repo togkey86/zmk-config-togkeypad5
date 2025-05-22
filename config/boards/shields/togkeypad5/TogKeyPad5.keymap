@@ -31,6 +31,14 @@
             , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_OFF>
             , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_ON>; 
         };
 
@@ -42,6 +50,10 @@
             , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_ON>
             ,  <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_OFF>
             , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_ON>; 
@@ -57,6 +69,10 @@
             ,  <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_OFF>
             , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_ON>; 
         };
 
@@ -68,6 +84,10 @@
             , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_ON>
             ,  <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_OFF>
             , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_ON>; 
