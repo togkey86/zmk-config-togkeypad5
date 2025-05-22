@@ -20,7 +20,57 @@
         bluetooth_profile_clear: bluetooth_profile_clear {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &bt BT_CLR>, <&macro_press &rgb_ug RGB_ON>, <&macro_wait_time 50>, <&macro_press &rgb_ug RGB_OFF>,  <&macro_wait_time 50>, <&macro_press &rgb_ug RGB_ON>, <&macro_wait_time 50>, <&macro_press &rgb_ug RGB_OFF>, <&macro_wait_time 50>, <&macro_press &rgb_ug RGB_ON>; 
+            bindings = <&macro_press &bt BT_CLR>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            ,  <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>; 
+        };
+
+        bluetooth_profile_select_0: bluetooth_profile_select_0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &bt BT_SEL 0>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            ,  <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>; 
+        };
+
+        bluetooth_profile_select_1: bluetooth_profile_select_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &bt BT_SEL 1>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            ,  <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>; 
+        };
+
+        bluetooth_profile_select_2: bluetooth_profile_select_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &bt BT_SEL 2>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            ,  <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>; 
         };
     };
 
@@ -90,9 +140,9 @@
             // |     BT 1    |     BT 2     |     BT CLR     |
             bindings = <
                 &my_mt1 0 0
-                &bt BT_SEL 0
-                &bt BT_SEL 1
-                &bt BT_SEL 2
+                &bluetooth_profile_select_0
+                &bluetooth_profile_select_1
+                &bluetooth_profile_select_2
                 &bluetooth_profile_clear
             >;
         };
