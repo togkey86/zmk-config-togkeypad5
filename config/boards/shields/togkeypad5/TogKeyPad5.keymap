@@ -189,9 +189,9 @@
             bindings = <
                 &sys_reset
                 &bootloader
-                &None
-                &None
-                &None
+                &kp None
+                &kp None
+                &kp None
             >;
         };
     };
