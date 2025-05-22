@@ -142,7 +142,7 @@
             display-name = "Hold-Tap Soft Off";
         };
 
-        my_mt3: momentary_layer {
+        my_mt3: to_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "Access Layer";
             #binding-cells = <2>;
