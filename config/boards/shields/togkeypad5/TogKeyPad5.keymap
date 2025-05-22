@@ -92,6 +92,23 @@
             , <&macro_wait_time 100>
             , <&macro_press &rgb_ug RGB_ON>; 
         };
+
+        bluetooth_profile_select_3: bluetooth_profile_select_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &bt BT_SEL 3>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            ,  <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_OFF>
+            , <&macro_wait_time 100>
+            , <&macro_press &rgb_ug RGB_ON>; 
+        };
     };
 
     behaviors {
@@ -111,8 +128,8 @@
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <2000>;
-            bindings = <&go_to_default_layer>, <&studio_unlock>;
-            display-name = "Hold-Tap To Default Layer + Studio Unlock";
+            bindings = <&go_to_default_layer>, <&bluetooth_profile_select_0>;
+            display-name = "Hold-Tap To Default Layer + Bluetooth 0";
         };
 
         my_mt2: soft_off {
@@ -156,13 +173,13 @@
         bluetooth_layer { // Layer 1
             display-name = "Bluetooth Functions";
             // -------------------------------------
-            //       |     Layer 0/ Studio     |     BT 0     |
-            // |     BT 1    |     BT 2     |     BT CLR     |
+            //       |     BT 0     |     BT 1     |
+            // |     BT 2    |     BT 3     |     BT CLR     |
             bindings = <
                 &my_mt1 0 0
-                &bluetooth_profile_select_0
                 &bluetooth_profile_select_1
                 &bluetooth_profile_select_2
+                &bluetooth_profile_select_3
                 &bluetooth_profile_clear
             >;
         };
@@ -185,13 +202,13 @@
             display-name = "Device Functions";
             // -------------------------------------
             //       |     Reset    |     Bootloader     |
-            // |     None     |     None    |     None     |
+            // |     Studio Unlock     |     Soft Off    |     Reset     |
             bindings = <
                 &sys_reset
                 &bootloader
-                &kp None
-                &kp None
-                &kp None
+                &studio_unlock
+                &soft_off
+                &sys_reset
             >;
         };
     };
