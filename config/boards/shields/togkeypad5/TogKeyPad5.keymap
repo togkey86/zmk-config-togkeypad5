@@ -97,11 +97,11 @@
             //       |     RGB TOG     |     Brightness Up     |
             // |     None     |     Brightness Down    |     Hue     |
             bindings = <
-                &RGB_TOG
-                &RGB_BRI
-                &RGB_TOG
-                &RGB_BRD
-                &RGB_HUI
+                &rgb_ug RGB_TOG
+                &rgb_ug RGB_BRI
+                &rgb_ug RGB_TOG
+                &rgb_ug RGB_BRD
+                &rgb_ug RGB_HUI
             >;
         };
     };
