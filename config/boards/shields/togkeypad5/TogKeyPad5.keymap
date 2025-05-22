@@ -91,7 +91,7 @@
             >;
         };
 
-        lighting_layer { // Layer 1
+        lighting_layer { // Layer 2
             display-name = "RGB Lighting Functions";
             // -------------------------------------
             //       |     RGB TOG     |     Brightness Up     |
@@ -99,7 +99,7 @@
             bindings = <
                 &RGB_TOG
                 &RGB_BRI
-                &bt BT_SEL 1
+                &RGB_TOG
                 &RGB_BRD
                 &RGB_HUI
             >;
