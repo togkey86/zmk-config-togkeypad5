@@ -125,9 +125,9 @@
             display-name = "Hold-Tap Soft Off";
         };
 
-        my_mt3: rgb_lighting_layer {
+        my_mt3: momentary_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "Access RGB Lighting";
+            label = "Access Layer";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <300>;
@@ -149,7 +149,7 @@
                 &kp C_VOLUME_UP
                 &my_mt3 2 C_PREVIOUS
                 &my_mt2 0 C_PLAY_PAUSE
-                &kp C_NEXT
+                &my_mt3 3 C_NEXT
             >;
         };
 
@@ -178,6 +178,20 @@
                 &rgb_ug RGB_TOG
                 &rgb_ug RGB_BRD
                 &rgb_ug RGB_HUI
+            >;
+        };
+
+        device_functions_layer { // Layer 3
+            display-name = "Device Functions";
+            // -------------------------------------
+            //       |     Reset    |     Bootloader     |
+            // |     None     |     None    |     None     |
+            bindings = <
+                &sys_reset
+                &bootloader
+                &None
+                &None
+                &None
             >;
         };
     };
