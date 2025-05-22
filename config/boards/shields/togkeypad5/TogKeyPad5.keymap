@@ -38,6 +38,16 @@
             bindings = <&go_to_default_layer>, <&studio_unlock>;
             display-name = "Hold-Tap-To-Default-Studio-Unlock";
         };
+
+        my_mt2: soft_off {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Soft Off";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <5000>;
+            bindings = <&soft_off>, <&kp>;
+            display-name = "Hold-Tap-Soft-Off";
+        };
     };
 
     keymap {
@@ -52,7 +62,7 @@
                 &my_mt 0 C_VOLUME_DOWN
                 &kp C_VOLUME_UP
                 &kp C_PREVIOUS
-                &kp C_PLAY_PAUSE
+                &my_mt2 0 C_PLAY_PAUSE
                 &kp C_NEXT
             >;
         };
