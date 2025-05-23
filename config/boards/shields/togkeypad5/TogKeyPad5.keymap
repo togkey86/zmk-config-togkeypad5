@@ -152,24 +152,14 @@
             display-name = "Hold-Tap Change Layer";
         };
 
-        my_mt4: brightness_saturation_up {
+        my_mt4: brightness_saturation {
             compatible = "zmk,behavior-hold-tap";
             label = "Access Layer";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <300>;
             bindings = <&rgb_ug>, <&rgb_ug>;
-            display-name = "Hold-Tap Change Layer";
-        };
-
-        my_mt5: brightness_saturation_down {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Access Layer";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <300>;
-            bindings = <&rgb_ug>, <&rgb_ug>;
-            display-name = "Hold-Tap Change Layer";
+            display-name = "Hold-Tap Brightness/Saturation Control";
         };
     };
 
@@ -213,7 +203,7 @@
                 &rgb_ug RGB_TOG
                 &my_mt4 RGB_SAI RGB_BRI
                 &rgb_ug RGB_TOG
-                &my_mt5 RGB_SAD RGB_BRD
+                &my_mt4 RGB_SAD RGB_BRD
                 &rgb_ug RGB_HUI
             >;
         };
