@@ -128,8 +128,8 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <1000>;
-            bindings = <&go_to_default_layer>, <&bluetooth_profile_select_0>;
-            display-name = "Hold-Tap To Default Layer + Bluetooth 0";
+            bindings = <&go_to_default_layer>, <&studio_unlock>;
+            display-name = "Hold-Tap To Default Layer + Studio Unlock";
         };
 
         my_mt2: soft_off {
@@ -149,6 +149,26 @@
             flavor = "hold-preferred";
             tapping-term-ms = <300>;
             bindings = <&mo>, <&kp>;
+            display-name = "Hold-Tap Change Layer";
+        };
+
+        my_mt4: brightness_saturation_up {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Access Layer";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&rgb_ug>, <&rgb_ug>;
+            display-name = "Hold-Tap Change Layer";
+        };
+
+        my_mt5: brightness_saturation_down {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Access Layer";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&rgb_ug>, <&rgb_ug>;
             display-name = "Hold-Tap Change Layer";
         };
     };
@@ -177,9 +197,9 @@
             // |     BT 2    |     BT 3     |     BT CLR     |
             bindings = <
                 &my_mt1 0 0
+                &bluetooth_profile_select_0
                 &bluetooth_profile_select_1
                 &bluetooth_profile_select_2
-                &bluetooth_profile_select_3
                 &bluetooth_profile_clear
             >;
         };
@@ -191,24 +211,10 @@
             // |     None     |     Brightness Down    |     Hue     |
             bindings = <
                 &rgb_ug RGB_TOG
-                &rgb_ug RGB_BRI
+                &my_mt4 RGB_SAI RGB_BRI
                 &rgb_ug RGB_TOG
-                &rgb_ug RGB_BRD
+                &my_mt5 RGB_SAD RGB_BRD
                 &rgb_ug RGB_HUI
-            >;
-        };
-
-        device_functions_layer { // Layer 3
-            display-name = "Device Functions";
-            // -------------------------------------
-            //       |     Reset    |     Bootloader     |
-            // |     Studio Unlock     |     Soft Off    |     Reset     |
-            bindings = <
-                &sys_reset
-                &bootloader
-                &studio_unlock
-                &soft_off
-                &sys_reset
             >;
         };
     };
