@@ -201,9 +201,9 @@
             // |     None     |     Brightness Down    |     Hue     |
             bindings = <
                 &rgb_ug RGB_TOG
-                &rgb_ug RGB_BRI
+                &my_mt4 RGB_HUI RGB_BRI
                 &rgb_ug RGB_TOG
-                &rgb_ug RGB_BRD
+                &my_mt4 RGB_HUD RGB_BRD
                 &rgb_ug RGB_HUI
             >;
         };
