@@ -122,14 +122,14 @@
         combo_pairing {
             timeout-ms = <50>;
             key-positions = <2 3 4>;
-            layers = 0;
+            layers = <0>;
             bindings = <&go_to_bluetooth_layer>;
         };
 
         combo_exit_pairing {
             timeout-ms = <50>;
             key-positions = <2 3 4>;
-            layers = 1;
+            layers = <1>;
             bindings = <&go_to_default_layer>;
         };
     };
