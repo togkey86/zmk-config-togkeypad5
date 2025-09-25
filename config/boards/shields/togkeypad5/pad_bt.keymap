@@ -122,7 +122,15 @@
         combo_pairing {
             timeout-ms = <50>;
             key-positions = <2 3 4>;
+            layers = 0;
             bindings = <&go_to_bluetooth_layer>;
+        };
+
+        combo_exit_pairing {
+            timeout-ms = <50>;
+            key-positions = <2 3 4>;
+            layers = 1;
+            bindings = <&go_to_default_layer>;
         };
     };
 
@@ -191,7 +199,7 @@
             //       |     BT 0     |     BT 1     |
             // |     BT 2    |     BT 3     |     BT CLR     |
             bindings = <
-                &my_mt1 0 0
+                &bluetooth_profile_select_0
                 &bluetooth_profile_select_1
                 &bluetooth_profile_select_2
                 &bluetooth_profile_select_3
