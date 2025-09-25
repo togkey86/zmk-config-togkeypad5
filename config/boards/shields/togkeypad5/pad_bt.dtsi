@@ -18,13 +18,6 @@
 
     };
 
-    keys {
-        compatible = "gpio-keys";
-        soft_off_gpio_key: soft_off_gpio_key {
-            gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        };
-    };
-
     transform: matrix_transform {
         compatible = "zmk,matrix-transform";
         rows = <2>;
