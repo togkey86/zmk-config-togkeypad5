@@ -13,8 +13,8 @@
         wakeup-source;
 
 
-        row-gpios = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-                    <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        row-gpios = <&xiao_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+                    <&xiao_d 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
 
     };
 
@@ -23,18 +23,6 @@
         soft_off_gpio_key: soft_off_gpio_key {
             gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         };
-    };
-
-    wakeup_scan: wakeup_scan {
-        compatible = "zmk,gpio-key-wakeup-trigger";
-        trigger = <&soft_off_gpio_key>;
-        wakeup-source;
-        extra-gpios = <&pro_micro 3 GPIO_ACTIVE_HIGH>;
-    };
-
-    soft_off_wakers {
-        compatible = "zmk,soft-off-wakeup-sources";
-        wakeup-sources = <&wakeup_scan>;
     };
 
     transform: matrix_transform {
@@ -53,7 +41,7 @@
     
     layout: layout {
         compatible = "zmk,physical-layout";
-        display-name = "TogKey Pad 2x3";
+        display-name = "TogKey Pad BT";
         kscan = <&kscan>;
         transform = <&transform>;
 

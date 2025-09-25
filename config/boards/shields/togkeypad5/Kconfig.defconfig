@@ -1,6 +1,6 @@
-if SHIELD_TOGKEYPAD5
+if SHIELD_PADBT
 
 config ZMK_KEYBOARD_NAME
-    default "TogKeyPad5"
+    default "Pad BT"
 
 endif

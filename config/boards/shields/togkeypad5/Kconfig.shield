@@ -1,2 +1,2 @@
-config SHIELD_TOGKEYPAD5
-    def_bool $(shields_list_contains, TogKeyPad5)
+config SHIELD_PADBT
+    def_bool $(shields_list_contains, pad_bt)
