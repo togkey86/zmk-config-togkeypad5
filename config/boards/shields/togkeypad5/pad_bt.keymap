@@ -146,6 +146,20 @@
             layers = <2>;
             bindings = <&to 0>;
         };
+
+        combo_layer_2 {
+            timeout-ms = <50>;
+            key-positions = <1 3>;
+            layers = <0>;
+            bindings = <&to 3>;
+        };
+
+        combo_exit_layer_2 {
+            timeout-ms = <50>;
+            key-positions = <1 3>;
+            layers = <3>;
+            bindings = <&to 0>;
+        };
     };
 
     behaviors {
@@ -232,6 +246,20 @@
                 &rgb_ug RGB_BRD
                 &rgb_ug RGB_HUD
                 &rgb_ug RGB_TOG
+            >;
+        };
+
+        user_layer { // Layer 3
+            display-name = "Lyr2 Second";
+            // -------------------------------------
+            //       |     RGB TOG     |     Brightness Up     |
+            // |     None     |     Brightness Down    |     Hue     |
+            bindings = <
+                &none
+                &none
+                &none
+                &none
+                &none
             >;
         };
     };
