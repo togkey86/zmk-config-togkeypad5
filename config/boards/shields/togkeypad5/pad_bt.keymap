@@ -194,7 +194,7 @@
         compatible = "zmk,keymap";
 
         default_layer { // Layer 0
-            display-name = "Default Layer";
+            display-name = "Main";
             // -------------------------------------
             //       |     Vol -/Layer 1     |     Vol +     |
             // |     Prev     |     Play     |     Next     |
@@ -208,7 +208,7 @@
         };
 
         bluetooth_layer { // Layer 1
-            display-name = "Pair";
+            display-name = "Pairing";
             // -------------------------------------
             //       |     BT 0     |     BT 1     |
             // |     BT 2    |     BT 3     |     BT CLR     |
@@ -222,7 +222,7 @@
         };
 
         lighting_layer { // Layer 2
-            display-name = "LED";
+            display-name = "LED Functions";
             // -------------------------------------
             //       |     RGB TOG     |     Brightness Up     |
             // |     None     |     Brightness Down    |     Hue     |
