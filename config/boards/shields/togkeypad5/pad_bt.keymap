@@ -250,7 +250,7 @@
         };
 
         user_layer { // Layer 3
-            display-name = "Lyr2 Second";
+            display-name = "User Layer";
             // -------------------------------------
             //       |     RGB TOG     |     Brightness Up     |
             // |     None     |     Brightness Down    |     Hue     |
